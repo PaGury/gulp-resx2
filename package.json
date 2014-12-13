@@ -1,0 +1,37 @@
+{
+  "name": "gulp-resx2",
+  "version": "0.1.0",
+  "description": "A resx file converter plugin for gulp",
+  "main": "index.js",
+  "dependencies": {
+    "libxmljs": "^0.12.0",
+    "gulp-util": "^3.0.1",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "should": "^4.1.0",
+    "mocha": "^2.0.1",
+    "gulp-util": "^3.0.1",
+    "event-stream": "^3.1.7"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pagury/gulp-resx2.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "resx",
+    "resources"
+  ],
+  "author": "Pierre-Alexandre Gury <pagury@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pagury/gulp-resx2/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
