@@ -1,5 +1,6 @@
 # gulp-resx2 [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url]
 > A resx file converter plugin for gulp
+> Convert xml based resources files to json
 
 ## Usage
 
