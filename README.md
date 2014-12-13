@@ -20,7 +20,7 @@ gulp.task('resources', function(){
     .pipe(gulp.dest('resources/resource.json'));
 });
 ```
-[travis-url]: http://travis-ci.org/pagury/gulp-resx2
-[travis-image]: https://secure.travis-ci.org/pagury/gulp-resx2.svg?branch=master
+[travis-url]: http://travis-ci.org/PaGury/gulp-resx2
+[travis-image]: https://secure.travis-ci.org/PaGury/gulp-resx2.svg?branch=master
 [npm-url]: https://npmjs.org/package/gulp-resx2
 [npm-image]: https://badge.fury.io/js/gulp-resx2.svg
