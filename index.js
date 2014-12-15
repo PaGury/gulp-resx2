@@ -4,12 +4,8 @@ var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
 var Buffer = require('buffer').Buffer;
 
-
 const PLUGIN_NAME = "gulp-resx2";
-module.exports = function(file, opt) {
-  if (!file) {
-    throw new PluginError(PLUGIN_NAME, 'Missing file option for gulp-resx2');
-  }
+module.exports = function(opt) {
   opt = opt || {};
 
   function doConvert(file) {
