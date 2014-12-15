@@ -1,6 +1,6 @@
 {
   "name": "gulp-resx2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A resx file converter plugin for gulp",
   "main": "index.js",
   "dependencies": {
