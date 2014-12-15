@@ -1,14 +1,16 @@
 var libxmljs = require("libxmljs");
-var through = require('through2');
+var through2 = require('through2');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
 var Buffer = require('buffer').Buffer;
+var path = require('path');
 
 const PLUGIN_NAME = "gulp-resx2";
 module.exports = function(opt) {
   opt = opt || {};
 
-  function doConvert(file) {
+  // Convert XML to JSON
+  var doConvert = function(file) {
     var xml = file.contents;
     var xmlDoc = libxmljs.parseXml(xml);
     var rootNode = xmlDoc.root();
@@ -22,9 +24,9 @@ module.exports = function(opt) {
     });
 
     return JSON.stringify(resourceObject);
-  }
+  };
 
-  function throughCallback(file, enc, cb) {
+  var throughCallback =  function(file, enc, cb) {
     if (file.isStream()) {
       this.emit('error', new PluginError(PLUGIN_NAME,  'Streaming not supported'));
       return cb();
@@ -35,7 +37,8 @@ module.exports = function(opt) {
     }
 
     this.push(file);
-  }
+    return cb();
+  };
 
-  return through.obj(throughCallback);
+  return through2.obj(throughCallback);
 };
